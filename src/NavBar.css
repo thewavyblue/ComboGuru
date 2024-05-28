@@ -1,0 +1,11 @@
+.navbar {
+    background: var(--elevation-overlay-02dp);
+    padding: 0 0.75 rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.navbar > ul > li {
+    padding: 0.5rem;
+}
