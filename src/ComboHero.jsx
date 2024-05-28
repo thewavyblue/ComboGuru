@@ -5,7 +5,7 @@ export default function ComboHero() {
     <section className="hero--container">
       <picture className="hero--img">
         <div className="hero--gradient"></div>
-        <img src="/public/img/hero-image--ryu.png" alt="A portrait of Ryu" />
+        <img src="/img/hero-image--ryu.png" alt="A portrait of Ryu" />
       </picture>
     </section>
   );
