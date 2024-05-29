@@ -1,3 +1,13 @@
+const u = "./assets/icon--up.svg";
+const d = "./assets/icon--down.svg";
+const l = "./assets/icon--left.svg";
+const r = "./assets/icon--right.svg";
+const uR = "./assets/icon--up-right.svg";
+const dR = "./assets/icon--down-right.svg";
+const uL = "./assets/icon--up-left.svg";
+const dL = "./assets/icon--down-left.svg";
+const s = "./assets/icon--special.svg";
+
 const data = [
     {
         id: 0,
@@ -10,13 +20,13 @@ const data = [
             special: [
                 {
                     name: "Shoryuken",
-                    combo: ["r", "d-l", "r", "s"],
-                    animation: "./img/gif--combo-example--hadouken.webp"
+                    combo: [r, dL, r, s],
+                    animation: "./img/gif--combo-example--shoryuken.webp"
                 },
                 {
                     name: "Hadouken",
-                    combo: ["d", "d-r", "r", "s"],
-                    animation: ""
+                    combo: [r, dR, d, dL, l, s],
+                    animation: "./img/gif--combo-example--hadouken.gif"
                 }
             ],
             light: [

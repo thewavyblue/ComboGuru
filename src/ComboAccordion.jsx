@@ -5,7 +5,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function ComboAccordion({summaryIcon, summary, moveName, combo, animation}) {
+export default function ComboAccordion(props) {
+
+  console.log(props)
   return (
     <Accordion sx={
       { 
@@ -17,42 +19,48 @@ export default function ComboAccordion({summaryIcon, summary, moveName, combo, a
         expandIcon={<ExpandMoreIcon sx={{color: "#ffffff"}} />}
         id="panel-header" 
         aria-controls="panel-content"
-      >
+        >
         <div className="row space-between">
           <div className="col">
             <div className="row gap-2 align-items-center">
-                <img src={summaryIcon} alt={summary} />
-                <h3>{summary}</h3>
+                <img src={props.summaryIcon} alt={props.summary} />
+                <h3>{props.summary}</h3>
             </div>
           </div>
         </div>
       </AccordionSummary>
+
       <AccordionDetails>
-        <div className="row space-between">
-          <div className="col gap-2 px-4">
-            <div className="row gap-2">
-              <div className="col" id="combo--title">
-                {moveName}
+      {props.moveType?.map((move, i) => {
+        console.log(move)
+        return (
+          <div className="row space-between" key={i}>
+            <div className="col gap-2 px-4">
+              <div className="row gap-2">
+                <div className="col" id="combo--title">
+                  {move.name}
+                </div>
+                <span className="col" id="combo--favourite">
+                  <img src="./assets/icon--star.svg" alt="Favourite" type="svg/image" />
+                </span>
               </div>
-              <span className="col" id="combo--favourite">
-                <img src="./assets/icon--star.svg" alt="Favourite" type="svg/image" />
-              </span>
+              <div className="row" id="combo--inputs">
+                {/* Combo input icons go here */}
+                {move.combo?.map((input, i) => {
+                  return (
+                    <img src={input} alt="" key={i}/>
+                  )
+                })}
+                <div className="col"></div>
+              </div>
             </div>
-            <div className="row" id="combo--inputs">
-              {/* Combo input icons go here */}
-              {combo}
-              <img src="./assets/icon--down.svg" alt="Down" />
-              <img src="./assets/icon--down-right.svg" alt="Down-right" />
-              <img src="./assets/icon--right.svg" alt="Right" />
-              <img src="./assets/icon--medium.svg" alt="Medium" />
-              <div className="col"></div>
+            <div className="col gif-wrapper py-4">
+              {/* GIF Animation goes here */}
+              <img src={move.animation} alt={move.name} className="gif" />
             </div>
           </div>
-          <div className="col gif-wrapper py-4">
-            {/* GIF Animation goes here */}
-            <img src={animation} alt={moveName} className="gif" />
-          </div>
-        </div>
+        )
+      })}
       </AccordionDetails>
     </Accordion>
   );

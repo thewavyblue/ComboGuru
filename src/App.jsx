@@ -20,12 +20,13 @@ export default function App() {
   const specialMoves = dataset.map(character => {
     return (
       <ComboAccordion 
-        key="id"
+        key="0"
         summaryIcon="./assets/icon--special.svg" 
         summary="Special moves"
-        moveName={character.moves.special.name}
-        combo={character.moves.special.combo}
-        animation={character.moves.special.animation}
+        moveType={character.moves.special}
+        moveName={character.moves.special[0].name}
+        combo={character.moves.special[0].combo}
+        animation={character.moves.special[0].animation}
         />
     )
   })
@@ -33,7 +34,7 @@ export default function App() {
   const lightMoves = dataset.map(character => {
     return (
       <ComboAccordion 
-        key="id"
+        key="1"
         summaryIcon="./assets/icon--light.svg" 
         summary="Light moves"
         moveName={character.moves.light.name}
@@ -46,7 +47,7 @@ export default function App() {
   const mediumMoves = dataset.map(character => {
     return (
       <ComboAccordion 
-        key="id"
+        key="2"
         summaryIcon="./assets/icon--medium.svg" 
         summary="Medium moves"
         moveName={character.moves.medium.name}
@@ -59,7 +60,7 @@ export default function App() {
   const heavyMoves = dataset.map(character => {
     return (
       <ComboAccordion 
-        key="id"
+        key="3"
         summaryIcon="./assets/icon--heavy.svg" 
         summary="Heavy moves"
         moveName={character.moves.heavy.name}
