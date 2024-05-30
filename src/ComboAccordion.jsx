@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function ComboAccordion(props) {
 
-  console.log(props)
+  // console.log(props)
   return (
     <Accordion sx={
       { 
@@ -32,7 +32,7 @@ export default function ComboAccordion(props) {
 
       <AccordionDetails>
       {props.moveType?.map((move, i) => {
-        console.log(move)
+        // console.log(move)
         return (
           <div className="row space-between" key={i}>
             <div className="col gap-2 px-4">

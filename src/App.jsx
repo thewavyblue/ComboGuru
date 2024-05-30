@@ -37,6 +37,7 @@ export default function App() {
         key={i}
         summaryIcon="./assets/icon--light.svg" 
         summary="Light moves"
+        moveType={character.moves.light}
         moveName={character.moves.light.name}
         combo={character.moves.light.combo}
         animation={character.moves.light.animation}
@@ -50,6 +51,7 @@ export default function App() {
         key={i}
         summaryIcon="./assets/icon--medium.svg" 
         summary="Medium moves"
+        moveType={character.moves.medium}
         moveName={character.moves.medium.name}
         combo={character.moves.medium.combo}
         animation={character.moves.medium.animation}
@@ -63,6 +65,7 @@ export default function App() {
         key={i}
         summaryIcon="./assets/icon--heavy.svg" 
         summary="Heavy moves"
+        moveType={character.moves.heavy}
         moveName={character.moves.heavy.name}
         combo={character.moves.heavy.combo}
         animation={character.moves.heavy.animation}

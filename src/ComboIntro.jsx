@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import './ComboIntro.css'
 
 export default function ComboIntro(props) {
+    let isExpanded = false;
     return (
         <section className="intro--container">
             <div className="hero--title col gap-2">
@@ -29,19 +30,27 @@ export default function ComboIntro(props) {
                         variant="contained"
                         size="small"
                         onClick={() => {
-                            function extendIntroText() {
-                                document.getElementById("intro--text").classList.add("extend");
-                                
-                                document.getElementById("read-more--wrapper").classList.add("read-state")
-                                
+                            
+                            function expandBioText() {
+                                isExpanded = !isExpanded;
+                                document.getElementById("intro--text").classList.add("expand");
+                                document.getElementById("read-more--wrapper").classList.add("read-state");
                                 document.getElementById("btn-read-more").innerText = "Read less";
+                                console.log(isExpanded);
                             }
-                                return (
-                                    extendIntroText()
-                                )
+
+                            function contractBioText() {
+                                isExpanded = !isExpanded;
+                                document.getElementById("intro--text").classList.remove("expand");
+                                document.getElementById("read-more--wrapper").classList.remove("read-state");
+                                document.getElementById("btn-read-more").innerText = "Read more";
+                                console.log(isExpanded);
+                            }
+
+                            return (isExpanded ? contractBioText() : expandBioText())
                             }
                         }
-                        >
+                    >
                         Read more
                     </Button>
                 </div>

@@ -6,7 +6,10 @@ const uR = "./assets/icon--up-right.svg";
 const dR = "./assets/icon--down-right.svg";
 const uL = "./assets/icon--up-left.svg";
 const dL = "./assets/icon--down-left.svg";
-const s = "./assets/icon--special.svg";
+const sp = "./assets/icon--special.svg";
+const lt = "./assets/icon--light.svg";
+const md = "./assets/icon--medium.svg";
+const hv = "./assets/icon--heavy.svg";
 
 const data = [
     {
@@ -21,49 +24,49 @@ const data = [
             special: [
                 {
                     name: "Shoryuken",
-                    combo: [r, dL, r, s],
-                    animation: "./img/gif--combo-example--shoryuken.webp"
+                    combo: [r, dL, r, sp],
+                    animation: "./img/ryu-sf2-shoryuken.gif"
                 },
                 {
                     name: "Hadouken",
-                    combo: [r, dR, d, dL, l, s],
+                    combo: [r, dR, d, dL, l, sp],
                     animation: "./img/gif--combo-example--hadouken.gif"
                 }
             ],
             light: [
                 {
-                    name: "Shoryuken",
-                    combo: ["r", "d-l", "r", "s"],
-                    animation: "./img/gif--combo-example--hadouken.webp"
+                    name: "Jab Punch",
+                    combo: [r, lt],
+                    animation: "./img/ryu-sf2-a1.gif"
                 },
                 {
-                    name: "Hadouken",
-                    combo: ["d", "d-r", "r", "s"],
-                    animation: ""
+                    name: "Reverse Punch",
+                    combo: [l, r, lt],
+                    animation: "./img/ryu-sf2-a2.gif"
                 }
             ],
             medium: [
                 {
-                    name: "Shoryuken",
-                    combo: ["r", "d-l", "r", "s"],
-                    animation: "./img/gif--combo-example--hadouken.webp"
+                    name: "Hurricane Kick",
+                    combo: [r, dR, d, dL, l, md],
+                    animation: "./img/gif--combo-example--hurricane-kick.gif"
                 },
                 {
-                    name: "Hadouken",
-                    combo: ["d", "d-r", "r", "s"],
-                    animation: ""
+                    name: "Spinning Back Kick",
+                    combo: [l, r, md],
+                    animation: "./img/ryu-sf2-a5.gif"
                 }
             ],
             heavy: [
                 {
-                    name: "Shoryuken",
-                    combo: ["r", "d-l", "r", "s"],
-                    animation: "./img/gif--combo-example--hadouken.webp"
+                    name: "Uppercut",
+                    combo: [d, u, hv],
+                    animation: "./img/ryu-sf2-c3.gif"
                 },
                 {
-                    name: "Hadouken",
-                    combo: ["d", "d-r", "r", "s"],
-                    animation: ""
+                    name: "Spinning Low Kick",
+                    combo: [dL, dL, hv],
+                    animation: "./img/ryu-sf2-c6.gif"
                 }
             ],
         }
