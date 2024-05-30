@@ -59,12 +59,26 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.intro--text .read-more--wrapper {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 8rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent, #121212);
 }
 
 /* STRUCTURAL STYLES */
@@ -166,6 +180,31 @@ button:focus-visible {
   height: 100%;
   /* width: 100%; */
 }
+
+/* WRAPPER STYLES */
+
+.intro--text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 10rem;
+  position: relative;
+}
+
+/* STATUS STYLES */
+
+.hidden {
+  display: none;
+}
+
+.read-state {
+  background: none !important;
+}
+
+.extend {
+  height: 100%;
+  padding-bottom: 4rem;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

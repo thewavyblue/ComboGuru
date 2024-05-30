@@ -32,11 +32,6 @@ export default function NavBar() {
 
 <BottomNavigation sx={{ bgcolor: '#353535' }} value={value} onChange={handleChange}>
     <BottomNavigationAction
-            label="Home"
-            value="Home"
-            icon={<TempleBuddhistIcon />}
-        />
-    <BottomNavigationAction
         label="Characters"
         value="characters"
         icon={<SportsMartialArtsIcon />}
@@ -45,6 +40,11 @@ export default function NavBar() {
         label="Combos"
         value="combos-list"
         icon={<FormatListBulletedIcon />}
+    />
+    <BottomNavigationAction
+            label="Home"
+            value="Home"
+            icon={<TempleBuddhistIcon />}
     />
     <BottomNavigationAction
         label="Favourites"

@@ -17,24 +17,24 @@ const darkTheme = createTheme({
 
 export default function App() {
 
-  const specialMoves = dataset.map(character => {
+  const specialMoves = dataset.map((character, i) => {
     return (
       <ComboAccordion 
-        key="0"
+        key={i}
         summaryIcon="./assets/icon--special.svg" 
         summary="Special moves"
         moveType={character.moves.special}
-        moveName={character.moves.special[0].name}
-        combo={character.moves.special[0].combo}
-        animation={character.moves.special[0].animation}
+        moveName={character.moves.special.name}
+        combo={character.moves.special.combo}
+        animation={character.moves.special.animation}
         />
     )
   })
 
-  const lightMoves = dataset.map(character => {
+  const lightMoves = dataset.map((character, i) => {
     return (
       <ComboAccordion 
-        key="1"
+        key={i}
         summaryIcon="./assets/icon--light.svg" 
         summary="Light moves"
         moveName={character.moves.light.name}
@@ -44,10 +44,10 @@ export default function App() {
     )
   })
 
-  const mediumMoves = dataset.map(character => {
+  const mediumMoves = dataset.map((character, i) => {
     return (
       <ComboAccordion 
-        key="2"
+        key={i}
         summaryIcon="./assets/icon--medium.svg" 
         summary="Medium moves"
         moveName={character.moves.medium.name}
@@ -57,10 +57,10 @@ export default function App() {
     )
   })
 
-  const heavyMoves = dataset.map(character => {
+  const heavyMoves = dataset.map((character, i) => {
     return (
       <ComboAccordion 
-        key="3"
+        key={i}
         summaryIcon="./assets/icon--heavy.svg" 
         summary="Heavy moves"
         moveName={character.moves.heavy.name}
@@ -74,7 +74,13 @@ export default function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <ComboHero />
-      <ComboIntro />
+      <ComboIntro
+        key={dataset.id}
+        characterName={dataset[0].characterBio.name}
+        origin={dataset[0].characterBio.origin}
+        flag={dataset[0].characterBio.flag}
+        bio={dataset[0].characterBio.bio}
+        />
       <section className="accordion--wrapper">
         {lightMoves}
         {mediumMoves}
