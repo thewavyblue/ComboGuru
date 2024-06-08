@@ -1,0 +1,26 @@
+.content--container {
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+  }
+  
+  .content--img {
+    position: relative;
+  }
+  
+  .content--gradient {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(18,18,18,1), rgba(18,18,18,0));
+    position: absolute;
+  }
+
+.favourite {
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: 0.5rem;
+    padding-right: 0
+
+}
+

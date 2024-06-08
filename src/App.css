@@ -6,3 +6,10 @@
   padding: 1rem;
   background: var(--background);
 }
+
+.tile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

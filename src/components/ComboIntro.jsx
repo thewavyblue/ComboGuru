@@ -13,9 +13,7 @@ export default function ComboIntro(props) {
                 </div>
                 <div className="row gap-2 align-items-center">
                     <div className="col align-content-center">
-                        <img
-                            className="icon--flag" src={props.flag} alt={props.origin}
-                        />
+                        <img className="icon--flag" src={props.flag} alt={props.origin} />
                     </div>
                     <div className="col align-content-center">
                         <p>{props.origin}</p>

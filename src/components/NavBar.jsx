@@ -10,6 +10,7 @@ import StarIcon from '@mui/icons-material/Star';
 import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import TempleBuddhistIcon from '@mui/icons-material/TempleBuddhist';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import TuneIcon from '@mui/icons-material/Tune';
 
 export default function NavBar() {
@@ -32,8 +33,18 @@ export default function NavBar() {
 
 <BottomNavigation sx={{ bgcolor: '#353535' }} value={value} onChange={handleChange}>
     <BottomNavigationAction
-        label="Characters"
-        value="characters"
+            label="Home"
+            value="Home"
+            icon={<TempleBuddhistIcon />}
+    />
+    <BottomNavigationAction
+        label="Games"
+        value="games"
+        icon={<SportsEsportsIcon />}
+    />
+    <BottomNavigationAction
+        label="Fighters"
+        value="fighters"
         icon={<SportsMartialArtsIcon />}
     />
     <BottomNavigationAction
@@ -42,19 +53,9 @@ export default function NavBar() {
         icon={<FormatListBulletedIcon />}
     />
     <BottomNavigationAction
-            label="Home"
-            value="Home"
-            icon={<TempleBuddhistIcon />}
-    />
-    <BottomNavigationAction
-        label="Favourites"
-        value="favourites"
+        label="Saved"
+        value="saved"
         icon={<StarIcon />}
-    />
-    <BottomNavigationAction
-        label="Settings"
-        value="settings"
-        icon={<TuneIcon />}
     />
     </BottomNavigation>
       </Paper>

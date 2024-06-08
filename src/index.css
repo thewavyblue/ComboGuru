@@ -111,6 +111,14 @@ button:focus-visible {
   justify-content: space-between;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
 /* SPACING STYLES */
 
 .gap-2 {
