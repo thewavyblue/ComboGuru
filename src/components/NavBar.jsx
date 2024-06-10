@@ -3,6 +3,7 @@ import "./NavBar.css"
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
 
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -11,7 +12,6 @@ import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import TempleBuddhistIcon from '@mui/icons-material/TempleBuddhist';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import TuneIcon from '@mui/icons-material/Tune';
 
 export default function NavBar() {
     const [value, setValue] = React.useState('recents');
@@ -31,33 +31,52 @@ export default function NavBar() {
         }} 
         elevation={3}>
 
-<BottomNavigation sx={{ bgcolor: '#353535' }} value={value} onChange={handleChange}>
-    <BottomNavigationAction
-            label="Home"
-            value="Home"
-            icon={<TempleBuddhistIcon />}
-    />
-    <BottomNavigationAction
-        label="Games"
-        value="games"
-        icon={<SportsEsportsIcon />}
-    />
-    <BottomNavigationAction
-        label="Fighters"
-        value="fighters"
-        icon={<SportsMartialArtsIcon />}
-    />
-    <BottomNavigationAction
-        label="Combos"
-        value="combos-list"
-        icon={<FormatListBulletedIcon />}
-    />
-    <BottomNavigationAction
-        label="Saved"
-        value="saved"
-        icon={<StarIcon />}
-    />
-    </BottomNavigation>
+        <BottomNavigation 
+          sx={{ bgcolor: '#353535' }} 
+          value={value} 
+          onChange={handleChange}>
+
+            <BottomNavigationAction
+              component={Link}
+              to="/"
+              label="Home"
+              value="/"
+              icon={<TempleBuddhistIcon />}
+            />
+          
+            <BottomNavigationAction
+              component={Link}
+              to="./pages/GameSelect"
+              label="Games"
+              value="/game-select"
+              icon={<SportsEsportsIcon />}
+            />
+          
+            <BottomNavigationAction
+              component={Link}
+              to="./pages/CharacterSelect"
+              label="Fighters"
+              value="/fighters"
+              icon={<SportsMartialArtsIcon />}
+            />
+          
+            <BottomNavigationAction
+              component={Link}
+              to="./pages/CharacterProfile"
+              label="Combos"
+              value="/combos-list"
+              icon={<FormatListBulletedIcon />}
+            />
+          
+            <BottomNavigationAction
+              component={Link}
+              to="./pages/Favourites"
+              label="Saved"
+              value="/favourites"
+              icon={<StarIcon />}
+            />
+
+        </BottomNavigation>
       </Paper>
     </Box>
   );

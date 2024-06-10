@@ -65,7 +65,9 @@ export default function CharacterProfile() {
 
   return (
       <div>
-        <ComboHero />
+        <ComboHero 
+          image={dataset[0].characterBio.image}/>
+          
         <ComboIntro
           key={dataset.id}
           characterName={dataset[0].characterBio.name}

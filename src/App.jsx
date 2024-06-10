@@ -1,7 +1,7 @@
 import './App.css';
-// import characterProfile from './CharacterProfile';
+import CharacterProfile from './pages/CharacterProfile';
 // import GameSelect from './pages/GameSelect';
-import CharacterSelect from './pages/CharacterSelect';
+// import CharacterSelect from './pages/CharacterSelect';
 import NavBar from './components/NavBar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -19,8 +19,9 @@ export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-        <CharacterSelect />
         {/* <GameSelect /> */}
+        {/* <CharacterSelect /> */}
+        <CharacterProfile />
 
       <NavBar />
     </ThemeProvider>
