@@ -24,9 +24,8 @@ export default function App() {
         <Routes>
           <Route index element={<GameSelect />} />
           <Route path="/games" element={<GameSelect />} />
-          <Route path="/characters" element={<CharacterSelect />}>
-            <Route path=":characterId" element={<CharacterProfile />} />
-          </Route>
+          <Route path="/fighters" element={<CharacterSelect />} />
+          <Route path="/fighters/:characterId" element={<CharacterProfile />} />
           <Route path="/favorites" element={<p>Favorites</p>} />
         </Routes>
         <NavBar />
