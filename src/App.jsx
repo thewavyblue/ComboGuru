@@ -18,7 +18,6 @@ const darkTheme = createTheme({
 const router = createBrowserRouter(
   [
     {
-      path: '/',
       element: (
         <>
           <Outlet />
