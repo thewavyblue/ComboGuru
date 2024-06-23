@@ -22,18 +22,18 @@ export default function NavBar() {
 
   return (
     <Box sx={{ pb: 7 }} >
-      <Paper 
-        sx={{ 
-            position: 'fixed', 
-            bottom: 0, 
-            left: 0, 
+      <Paper
+        sx={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
             right: 0
-        }} 
+        }}
         elevation={3}>
 
-        <BottomNavigation 
-          sx={{ bgcolor: '#353535' }} 
-          value={value} 
+        <BottomNavigation
+          sx={{ bgcolor: '#353535' }}
+          value={value}
           onChange={handleChange}>
 
             <BottomNavigationAction
@@ -43,36 +43,36 @@ export default function NavBar() {
               value="/"
               icon={<TempleBuddhistIcon />}
             />
-          
+
             <BottomNavigationAction
               component={Link}
-              to="./pages/GameSelect"
+              to="/games"
               label="Games"
-              value="/game-select"
+              value="/games"
               icon={<SportsEsportsIcon />}
             />
-          
+
             <BottomNavigationAction
               component={Link}
-              to="./pages/CharacterSelect"
+              to="/fighters"
               label="Fighters"
               value="/fighters"
               icon={<SportsMartialArtsIcon />}
             />
-          
+
             <BottomNavigationAction
               component={Link}
-              to="./pages/CharacterProfile"
+              to="/fighters/0"
               label="Combos"
               value="/combos-list"
               icon={<FormatListBulletedIcon />}
             />
-          
+
             <BottomNavigationAction
               component={Link}
-              to="./pages/Favourites"
+              to="/favorites"
               label="Saved"
-              value="/favourites"
+              value="/favorites"
               icon={<StarIcon />}
             />
 
